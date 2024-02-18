@@ -1,10 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+
+    // function calculator(a, b) {
+    //     let res = a + b;
+    //     // console.log(res);
+    //     return res;
+    // }
+    //
+    // let r1 = calculator(10, 20);
+    // let r2 = calculator(20, 30);
+    // let r3 = calculator(100, 500);
+    // console.log(r1, r2, r3);
+    //
+    // console.log(
+    //     calculator(10, 20) + calculator(20, 30)
+    // );
+
+
+    // let x = 10;
+    //
+    // function calc(a, b) {
+    //     a = x;
+    //     return a + b;
+    // }
+    //
+    //
+    // x = 100;
+    // console.log(calc(10, 20));
+
+
+    // let pr1 = 10;
+    // let x = pr1;
+    // console.log(pr1, x);
+    // x = 20;
+    // console.log(pr1, x);
+
+    // let obj = {name: 'kokos'};
+    //
+    // let obj2 = obj;
+    //
+    // console.log(obj, obj2);
+    //
+    // obj2.name = 'abrikos';
+    // console.log(obj, obj2);
+
+    // let arr = [1, 2, 3];
+    // let mass = arr;
+    // mass[3] = 'zazazazaz';
+    // console.log(arr);
+
+    // function print(text) {
+    //     document.write(text);
+    //     console.log(text);
+    // }
+    //
+    // print('oketn');
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    // > <  >= <=  ===  !==
+    // console.log(10 !== 5);
+    function checkAge(user) {
+        return user.age > 29;
+    }
+
+    // console.log(checkAge(users[10]));
+    function checkAgeAndStatus(user) {
+        return checkAge(user) && user.status
+    }
+
+    console.log(checkAgeAndStatus(users[0]));
+
+
+    for (const user of users) {
+        document.write('<div>');
+            document.write(`name - ${user.name}`);
+        if (checkAgeAndStatus(user)) {
+            document.write('<div>valid</div>');
+        } else {
+            document.write('<div>invalid</div>');
+        }
+        document.write('</div>');
+    }
+
+
+</script>
 </body>
 </html>

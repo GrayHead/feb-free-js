@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .wrap {
+            background: silver;
+
+        }
+
+        .wrap > h2 {
+            background: gray;
+            width: 400px;
+
+        }
+
+        .xxx {
+            color: cornflowerblue;
+
+        }
+
+    </style>
 </head>
 <body>
-$END$
+
+<div class="wrap"></div>
+
+
+<script>
+    // DOM
+    // let html = document.children[0];
+    // console.log(html);
+    // let head = html.children[0];
+    // let body = html.children[1];
+    // console.log(head);
+    // console.log(head.children);
+    // console.log(body);
+    // console.log(body.children);
+
+
+    let h2 = document.createElement('h2');
+    h2.innerText = 'okten is cool';
+    h2.classList.add('xxx');
+    h2.classList.add('yyy');
+    console.log(h2.classList);
+
+    // document.body.appendChild(h2);
+
+    let allDivElements = document.getElementsByTagName('div');//[]
+    let wrap = allDivElements[0];
+    console.log(wrap);
+    wrap.appendChild(h2);
+
+    wrap.style.background = 'silver';
+
+
+</script>
 </body>
 </html>
+<!--document-->
+<!--    html-->
+<!--        head-->
+<!--            meta-->
+<!--            title-->
+<!--        body-->
+<!--            script-->
